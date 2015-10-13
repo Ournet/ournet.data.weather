@@ -1,0 +1,28 @@
+{
+  "name": "ournet.data.weather",
+  "version": "0.2.6",
+  "private": true,
+  "description": "ournet weather data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ournet/ournet.data.weather.git"
+  },
+  "keywords": [
+    "ournet",
+    "data",
+    "weather"
+  ],
+  "author": "Dumitru Cantea",
+  "license": "ISC",
+  "dependencies": {
+    "joi": "^5.1.0",
+    "ournet.core": "^0.1.8",
+    "request": "^2.53.0",
+    "vogels": "2.0.0-rc8",
+    "xml2js": "^0.4.5"
+  }
+}

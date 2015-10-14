@@ -1,7 +1,6 @@
 {
   "name": "ournet.data.weather",
   "version": "0.2.6",
-  "private": true,
   "description": "ournet weather data",
   "main": "index.js",
   "scripts": {

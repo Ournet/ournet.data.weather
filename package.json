@@ -1,8 +1,8 @@
 {
   "name": "ournet.data.weather",
-  "version": "0.2.7",
+  "version": "0.3.0",
   "description": "ournet weather data",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0"
   },
@@ -18,10 +18,11 @@
   "author": "Dumitru Cantea",
   "license": "ISC",
   "dependencies": {
-    "joi": "^5.1.0",
-    "ournet.core": "^0.1.8",
-    "request": "^2.53.0",
-    "vogels": "2.0.0-rc8",
-    "xml2js": "^0.4.5"
+    "bluebird": "^3.1.1",
+    "lodash": "^4.0.0",
+    "ournet.utils": "^0.1.0",
+    "request": "^2.67.0",
+    "vogels-helpers": "^0.1.4",
+    "xml2js": "^0.4.16"
   }
 }

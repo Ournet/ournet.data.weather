@@ -4,7 +4,7 @@
   "description": "ournet weather data",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "./node_modules/mocha/bin/mocha -R spec -t 5000"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
     "request": "^2.67.0",
     "vogels-helpers": "^0.1.4",
     "xml2js": "^0.4.16"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5"
   }
 }

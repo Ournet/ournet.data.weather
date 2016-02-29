@@ -4,7 +4,8 @@
   "description": "ournet weather data",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R spec -t 5000"
+    "test": "./node_modules/mocha/bin/mocha -R spec -t 5000",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",

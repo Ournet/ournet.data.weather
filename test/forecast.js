@@ -14,4 +14,14 @@ describe('forecast', function() {
 				assert.ok(report);
 			});
 	});
+
+	// it('RU: should get weather forecast', function() {
+	// 	return forecast.get({ id: 543310, country: 'Russia', region: 'Saratov', name: 'Kozhevskiy' })
+	// 		.then(function(report) {
+	// 			var item = report.days[0].times[0];
+	// 			console.log(report);
+	// 			assert.equal(item.from, new Date(item.from).getTime());
+	// 			assert.ok(report);
+	// 		});
+	// });
 });

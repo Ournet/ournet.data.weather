@@ -1,27 +1,16 @@
-/*eslint handle-callback-err:1*/
 'use strict';
 
 var forecast = require('../lib/forecast');
 var assert = require('assert');
 
+var chisinau = { timezone: 'Europe/Chisinau', latitude: 47.0, longitude: 28.8 };
+
 describe('forecast', function() {
 	it('should get weather forecast', function() {
-		return forecast.get({ id: 618426, country: 'Moldova', region: 'Chisinau', name: 'Chisinau' })
+		return forecast.get(forecast.formatSelector(chisinau))
 			.then(function(report) {
-				var item = report.days[0].times[0];
-				// console.log(report.days);
-				assert.equal(item.from, new Date(item.from).getTime());
+				// console.log(report.days[1].times);
 				assert.ok(report);
 			});
 	});
-
-	// it('RU: should get weather forecast', function() {
-	// 	return forecast.get({ id: 543310, country: 'Russia', region: 'Saratov', name: 'Kozhevskiy' })
-	// 		.then(function(report) {
-	// 			var item = report.days[0].times[0];
-	// 			console.log(report);
-	// 			assert.equal(item.from, new Date(item.from).getTime());
-	// 			assert.ok(report);
-	// 		});
-	// });
 });

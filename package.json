@@ -1,6 +1,6 @@
 {
   "name": "ournet.data.weather",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "ournet weather data",
   "main": "./lib/index.js",
   "scripts": {
@@ -24,6 +24,7 @@
     "lodash": "^4.0.0",
     "memory-cache": "^0.1.4",
     "metno-client": "^0.1.1",
+    "metno-symbols": "^0.1.0",
     "moment-timezone": "^0.5.1",
     "ournet.utils": "^0.1.0",
     "request": "^2.67.0",

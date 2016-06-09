@@ -29,13 +29,15 @@ describe('alarms', function() {
 			});
 	});
 	it('should find wind alarms', function(done) {
+
+		process.env.WEATHER_ALARM_WIND_LEVEL_YELLOW = 1;
+
 		var alarms = findAlarms(place, report.days[1], {
 			types: [Alarm.TYPE.WIND],
 			level: Alarm.LEVEL.YELLOW,
 			langs: ['ro', 'ru']
 		});
-		assert.equal(true, alarms.length >= 0);
-		// console.log(alarms);
+		assert.equal(1, alarms.length);
 		done();
 	});
 

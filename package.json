@@ -1,6 +1,6 @@
 {
   "name": "ournet.data.weather",
-  "version": "0.4.9",
+  "version": "0.5.0",
   "description": "ournet weather data",
   "main": "./lib/index.js",
   "scripts": {

@@ -1,5 +1,7 @@
 'use strict';
 
+process.env.WEATHER_ALARM_WIND_LEVEL_YELLOW = 1;
+
 var Alarm = require('../lib/alarms/alarm');
 var findAlarms = require('../lib/alarms/find');
 var forecast = require('../lib/forecast');
@@ -29,8 +31,6 @@ describe('alarms', function() {
 			});
 	});
 	it('should find wind alarms', function(done) {
-
-		process.env.WEATHER_ALARM_WIND_LEVEL_YELLOW = 1;
 
 		var alarms = findAlarms(place, report.days[1], {
 			types: [Alarm.TYPE.WIND],

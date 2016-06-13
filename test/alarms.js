@@ -30,20 +30,21 @@ describe('alarms', function() {
 				report = rep;
 			});
 	});
-	it('should find wind alarms', function(done) {
+	it('should find wind alarms', function() {
 
-		var alarms = findAlarms(place, report.days[1], {
+		return findAlarms(place, report.days[1], {
 			types: [Alarm.TYPE.WIND],
 			level: Alarm.LEVEL.YELLOW,
 			langs: ['ro', 'ru']
+		}).then(function(alarms) {
+			assert.equal(1, alarms.length);
 		});
-		assert.equal(1, alarms.length);
-		done();
 	});
 
-	it('should find no alarms', function(done) {
-		var alarms = findAlarms(place, report.days[1], { types: [] });
-		assert.equal(0, alarms.length);
-		done();
+	it('should find no alarms', function() {
+		return findAlarms(place, report.days[1], { types: [] })
+			.then(function(alarms) {
+				assert.equal(0, alarms.length);
+			});
 	});
 });

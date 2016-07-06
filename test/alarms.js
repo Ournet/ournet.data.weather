@@ -1,6 +1,7 @@
 'use strict';
 
 process.env.WEATHER_ALARM_WIND_LEVEL_YELLOW = 1;
+process.env.WEATHER_ALARM_PRECIPITATION_LEVEL_YELLOW = 1;
 
 var Alarm = require('../lib/alarms/alarm');
 var findAlarms = require('../lib/alarms/find');
@@ -31,13 +32,14 @@ describe('alarms', function() {
 			});
 	});
 	it('should find wind alarms', function() {
-
+		report.days[1].times[1].p.value = 20;
 		return findAlarms(place, report.days[1], {
-			types: [Alarm.TYPE.WIND],
+			types: [Alarm.TYPE.WIND, Alarm.TYPE.PRECIPITATION],
 			level: Alarm.LEVEL.YELLOW,
 			langs: ['ro', 'ru']
 		}).then(function(alarms) {
-			assert.equal(1, alarms.length);
+			// console.log(alarms)
+			assert.equal(2, alarms.length);
 		});
 	});
 

@@ -32,6 +32,7 @@ describe('alarms', function() {
 			});
 	});
 	it('should find wind alarms', function() {
+		report.days[1].times[0].p.value = 2;
 		report.days[1].times[1].p.value = 20;
 		return findAlarms(place, report.days[1], {
 			types: [Alarm.TYPE.WIND, Alarm.TYPE.PRECIPITATION],

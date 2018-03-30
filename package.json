@@ -4,7 +4,7 @@
   "description": "ournet weather data",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R spec -t 5000",
+    "test": "mocha -R spec -t 5000",
     "lint": "eslint ."
   },
   "repository": {
@@ -22,13 +22,13 @@
     "bluebird": "^3.1.1",
     "debug": "^2.2.0",
     "lodash": "^4.0.0",
-    "metno-client": "^0.1.5",
+    "metno-client": "^0.1.7",
     "metno-symbols": "^0.1.1",
     "moment-timezone": "^0.5.1",
     "ournet.utils": "^0.1.0",
     "request": "^2.69.0",
     "vogels-helpers": "^0.1.4",
-    "xml2js": "^0.4.16"
+    "xml2js": "^0.4.19"
   },
   "devDependencies": {
     "mocha": "^2.4.5",
